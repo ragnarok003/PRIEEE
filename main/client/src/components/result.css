@@ -1,0 +1,32 @@
+
+body{
+   font-size:20px;
+}
+.result-grid {
+   padding: 20px;
+ }
+ 
+ .card {
+   margin-bottom: 20px;
+ }
+ 
+ .card img {
+   height: 200px;
+   object-fit: cover;
+   border-radius: 10px;
+ }
+ #card1{
+   height: 37vh;
+ }
+ #back{
+   height: 50px;
+   width: 50px;
+   border-radius: 50px;
+   outline: none;
+   background-color: rgb(255, 255, 255);
+   color: black;
+   font-weight: 1000;
+   font-size: x-large;
+   margin-left: 20px;
+ }
+ 

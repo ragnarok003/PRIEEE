@@ -1,0 +1,71 @@
+/* myform.css */
+body{
+   background: 
+  linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+  url("D:/priee/PRIEEE/main/client/src/assets/bg.jpg");
+  background-size: cover;
+
+
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   color: white;
+}
+.card {
+   max-width: 500px;
+   margin: 50px auto;
+   padding: 20px;
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   background : rgba(193, 193, 193, 0.49);
+ }
+ 
+ .form {
+   display: flex;
+   flex-direction: column;
+   
+ }
+ 
+ .form div {
+   margin-bottom: 15px;
+   
+ }
+ 
+ button {
+   width: 100%;
+   padding: 10px;
+   border: none;
+   border-radius: 5px;
+   background-color: #007bff;
+   color: #ffffff;
+   font-size: 16px;
+   cursor: pointer;
+ }
+ 
+ button:hover {
+   background-color: #0056b3;
+ }
+ 
+ .display-6 {
+   font-size: 1.5rem;
+   margin-bottom: 20px;
+ }
+ 
+ .floating-label {
+   margin-bottom: 1.5rem;
+   background : rgba(193, 193, 193, 0.49);
+ }
+ 
+ .floating-label label {
+   color: #6c757d;
+ }
+ 
+ .floating-label input {
+   border: px solid #ced4da;
+   border-radius: 0.25rem;
+ }
+ 
+ .floating-label input:focus {
+   border-color: #80bdff;
+   outline: 0;
+   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+ }
+ 
