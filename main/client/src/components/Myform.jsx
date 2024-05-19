@@ -7,7 +7,19 @@ import "./myform.css"
 const Myform = () => {
   const { handleSubmit, register } = useForm();
   const navigate=useNavigate();
-  const onSubmit = (values) =>{navigate('/result',{state:{values}})};
+  const onSubmit = (values) =>{
+    axios.get('http://127.0.0.1:5000/api/recommend', {
+      params: {
+        values
+      }
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  };
   return (
     <div class = "card">
       <h6 style={{ textAlign: "center" }} className="display-6">
