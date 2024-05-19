@@ -4,6 +4,7 @@ import { BrowserRouter, Routes,Route } from 'react-router-dom';
 import ReactDOM from 'react-dom/client'
 import Myform from './components/Myform'
 import Result from './components/Result'
+import "./App.css";
 function App() {
 
   return (

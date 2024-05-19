@@ -39,11 +39,14 @@ def crop_recommend(request):
 #     "Annual_Rainfall":315.9
 # })
 
-# crop_yeild({
-#     "Crop_Year": 2024,
-#     "Season": "Kharif",
-#     "State": "Tamil Nadu",
-#     "Area": 95217.0,
-#     "Production": 35885,
-#     "Annual_Rainfall":315.9,
-#     },"Urad")
+a=crop_yeild({
+    "Crop_Year": 2024,
+    "Season": "Kharif",
+    "State": "Tamil Nadu",
+    "Area": 95217.0,
+    "Production": 35885,
+    "Annual_Rainfall":315.9,
+    },"Urad")
+
+print(a)
+#output {'Fertilizer': 12.1582367994, 'Pesticide': 16339137.180100005, 'Yield': 34844.3036}

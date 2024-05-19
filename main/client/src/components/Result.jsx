@@ -38,8 +38,8 @@ const Result = () => {
               
               <strong>Farming Practices :</strong>
               <ol>
-                <li>{location.state.response.Fertilizer}</li>
-                <li>{location.state.response.Pesticide}</li>
+                <li>Fertilizer :{Math.round(location.state.response.Fertilizer)}</li>
+                <li>Pesticide:{Math.round(location.state.response.Pesticide,2)}</li>
               </ol>
 
               <strong>Yield :</strong> {location.state.response.Yield|| 'N/A'}<br />

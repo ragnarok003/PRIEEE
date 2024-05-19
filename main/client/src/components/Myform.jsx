@@ -29,7 +29,7 @@ const Myform = () => {
   };
   return (
     <div className= "card">
-      <h6 style={{ textAlign: "center" }} className="display-6">
+      <h6 style={{ textAlign: "center",}} className="display-6">
         Myform
       </h6>
       <Form className = "form" onSubmit={handleSubmit(onSubmit)}>
