@@ -12,7 +12,7 @@ def handle_form_data():
     data = request.json
     cropS=crop_recommend(data)
     cropY=crop_yeild(data,cropS)
-    response=cropY|{"Crop":cropS}
+    response=cropY|{"Crop":cropS}|data
     return jsonify(response)
    
 

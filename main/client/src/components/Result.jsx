@@ -3,10 +3,10 @@ import { Card, Row, Col } from 'react-bootstrap';
 import { useLocation } from "react-router-dom";
 import photo from "./arecanut.jpeg"
 import './result.css';
+import CropImage from "./CropImage";
 
 const Result = () => {
   const location = useLocation();
-  const data = location.state.values || {};
   const back = "<"
 
   return (
@@ -21,10 +21,11 @@ const Result = () => {
               <Card.Title>Entered Details</Card.Title>
               <br/>
               <Card.Text>
-                <strong>Season:</strong> {data.season || 'N/A'}<br />
-                <strong>State:</strong> {data.state || 'N/A'}<br />
-                <strong>Area:</strong> {data.area || 'N/A'}<br />
-                <strong>Production:</strong> {data.production || 'N/A'}
+                <strong>Season:</strong> {location.state.values.Season||'N/A'}<br />
+                <strong>State:</strong> {location.state.values.State||'N/A'}<br />
+                <strong>Area:</strong> {location.state.values.Area||'N/A'}<br />
+                <strong>Production:</strong> {location.state.values.Production||'N/A'}<br/>
+                <strong>Annual Rainfall:</strong> {location.state.values.Annual_Rainfall||'N/A'}
               </Card.Text>
             </Card.Body>
           </Card>
@@ -33,23 +34,23 @@ const Result = () => {
           <Card>
             <Card.Body>
               <Card.Title>My Recommendations</Card.Title>
-              <strong>Crop recommendation : </strong> {data.season || 'N/A'}<br />
+              <strong>Crop recommendation : </strong> {location.state.response.Crop|| 'N/A'}<br />
               
               <strong>Farming Practices :</strong>
               <ol>
-                <li>abc</li>
-                <li>abc</li>
+                <li>{location.state.response.Fertilizer}</li>
+                <li>{location.state.response.Pesticide}</li>
               </ol>
 
-              <strong>Yield :</strong> {data.area || 'N/A'}<br />
+              <strong>Yield :</strong> {location.state.response.Yield|| 'N/A'}<br />
             </Card.Body>
           </Card>
         </Col>
         <Col md={4}>
           <Card>
-            <img src = {photo}/>
+            <CropImage crop={location.state.response.Crop} />
             <Card.Body>
-              <Card.Title>Crop Image</Card.Title>
+              <Card.Title>{location.state.response.Crop}</Card.Title>
             </Card.Body>
           </Card>
         </Col>

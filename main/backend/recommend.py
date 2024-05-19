@@ -16,11 +16,12 @@ def crop_yeild(request,cropS):
     y_pred = load_model_Y.predict(input_df)
     y_pred=pd.DataFrame(y_pred,columns=['Fertilizer','Pesticide','Yield']).to_json(orient='records')
     y_pred=json.loads(y_pred)[0]
-    ic(type(y_pred))
     return y_pred
     
 def crop_recommend(request):
+#    ic(request)
    input_df = pd.DataFrame([request])
+   ic(input_df)
    input_df['Season']=label_encoder.fit_transform(input_df['Season'])
    input_df['State']=label_encoder.fit_transform(input_df['State'])
    y_pred = load_model_R.predict(input_df)
@@ -29,20 +30,20 @@ def crop_recommend(request):
 
 
 
-crop_recommend({
-    "Crop_Year": 2024,
-    "Season": "Kharif",
-    "State": "Tamil Nadu",
-    "Area": 95217.0,
-    "Production": 35885,
-    "Annual_Rainfall":315.9
-})
+# crop_recommend({
+#     "Crop_Year": 2024,
+#     "Season": "Kharif",
+#     "State": "Tamil Nadu",
+#     "Area": 95217.0,
+#     "Production": 35885,
+#     "Annual_Rainfall":315.9
+# })
 
-crop_yeild({
-    "Crop_Year": 2024,
-    "Season": "Kharif",
-    "State": "Tamil Nadu",
-    "Area": 95217.0,
-    "Production": 35885,
-    "Annual_Rainfall":315.9,
-    },"Urad")
+# crop_yeild({
+#     "Crop_Year": 2024,
+#     "Season": "Kharif",
+#     "State": "Tamil Nadu",
+#     "Area": 95217.0,
+#     "Production": 35885,
+#     "Annual_Rainfall":315.9,
+#     },"Urad")
