@@ -38,3 +38,4 @@ a=crop_yeild({
     },"Urad")
 
 print(a)
+#output {'Fertilizer': 12.1582367994, 'Pesticide': 16339137.180100005, 'Yield': 34844.3036}
